@@ -1,10 +1,13 @@
 #!bin/bash
 
 echo "Build stage"
-sudo apt-get update
-sudo apt-get install -y curl jq
 
 # apt deprndancies
+sudo apt-get update
+sudo apt-get install -y curl jq
+sudo usermodm -aG docker jenkins
+
+
 
 # install docker 
 curl https://get.docker.com | sudo bash
