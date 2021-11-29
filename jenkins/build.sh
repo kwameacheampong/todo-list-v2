@@ -2,7 +2,7 @@
 
 echo "Build stage"
 
-
+docker-compose build
 
 
 

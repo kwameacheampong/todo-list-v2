@@ -1,4 +1,4 @@
 #!bin/bash
 
 echo "Push stage"
-docker -compose stage
+docker-compose push
