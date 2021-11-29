@@ -5,7 +5,8 @@ echo "Build stage"
 # apt deprndancies
 sudo apt-get update
 sudo apt-get install -y curl jq
-sudo usermodm -aG docker jenkins
+sudo usermod -aG docker jenkins
+newgrp docker 
 
 
 
