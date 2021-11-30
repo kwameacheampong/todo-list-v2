@@ -4,7 +4,7 @@ echo "Build stage"
 
 # apt deprndancies
 sudo apt-get update
-sudo apt-get install -y curl jq
+sudo apt-get install -y curl jq python3 -venv
 sudo usermod -aG docker jenkins
 newgrp docker 
 
