@@ -7,7 +7,7 @@ python3 -m venv venv
 source venv/bin/activate
 
 # pip3 installs, pytest, flask_testing, frontend requirements.txt and backend requirements.txt
-pip3 install pytest flask_testing
+pip3 install pytest flask_testing pytest-cov
 pip3 install -r frontend/requirements.txt 
 pip3 install -r backend/requirements.txt
 
@@ -17,14 +17,14 @@ mkdir test_reports
 python3 -m pytest frontend \
    --cov=frontend/application \
    --cov-report term-missing \
-   --cov-report xml:test_reoprts/frontend_coverage.xml \
+   --cov-report xml:test_reports/frontend_coverage.xml \
    --junittxml=test_reports/frontend_junit_report.xml
 
 # run pytest backend
 python3 -m pytest backend
    --cov=backend/application \
    --cov-report term-missing \
-   --cov-report xml:test_reoprts/backend_coverage.xml \
+   --cov-report xml:test_reports/backend_coverage.xml \
    --junittxml=test_reports/backend_junit_report.xml
 
 deactivate
